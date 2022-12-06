@@ -87,6 +87,7 @@ dependencies = [
   ...
 ]
 
+### ??
 [project.optional-dependencies]
 option1 = [
   "...",
@@ -94,6 +95,10 @@ option1 = [
 option2 = [
   "...",
 ]
+
+### set env param for project 
+### https://hatch.pypa.io/latest/config/environment/overview/
+[tool.hatch.envs.<ENV_NAME>]
 ```  
 - **move scripts from makefile to pyproject.toml**  
 Example: https://github.com/pypa/hatch/blob/master/hatch.toml
@@ -101,9 +106,9 @@ Example: https://github.com/pypa/hatch/blob/master/hatch.toml
 
 
 
-1. New project: ```hatch new "Hatch Demo"```
+3. New project: ```hatch new "Hatch Demo"```
 
-2. Venv: ```hatch env create```
+4. Venv: ```hatch env create```
    1. Package for venv: ```shellingham```  
    2. Spawn: ```hatch shell```
 

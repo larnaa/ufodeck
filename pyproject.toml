@@ -10,7 +10,7 @@ requires-python = ">=3.7"
 license = "MIT"
 keywords = []
 authors = [
-  { name = "larnaa", email = "juliakorni1997@yandex.ru" },
+  { name = "larnaa", email = "larnaa@larnaa.pw" },
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -39,6 +39,7 @@ dependencies = [
   "pytest",
   "pytest-cov",
 ]
+
 [tool.hatch.envs.default.scripts]
 cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=kiosk --cov=tests"
 no-cov = "cov --no-cov"
