@@ -87,15 +87,6 @@ dependencies = [
   ...
 ]
 
-### ??
-[project.optional-dependencies]
-option1 = [
-  "...",
-]
-option2 = [
-  "...",
-]
-
 ### set env param for project 
 ### https://hatch.pypa.io/latest/config/environment/overview/
 [tool.hatch.envs.<ENV_NAME>]
