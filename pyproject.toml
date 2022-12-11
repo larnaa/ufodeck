@@ -1,25 +1,24 @@
 [project]
-name = "kiosk"
-description = 'Tool to manage and visualize OS state.'
+name = "ufodeck"
+description = 'Tool to manage loading OS and visualize OS state.'
 license = "MIT"
 authors = [
   { name = "larnaa", email = "larnaa@larnaa.pw" },
 ]
-dependencies = []
 dynamic = ["version"]
 
-
 [tool.hatch.version]
-path = "src/__init__.py"
+path = "src/ufodeck/__init__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
+  "rtoml",
   "pytest",
-  "pytest-cov",
+  "pytest-cov"
 ]
 
-[tool.hatch.envs.default.scripts]
-cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=kiosk --cov=tests"
+[tool.hatch.envs.default.scripts] 
+cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=ufodeck --cov=tests"
 no-cov = "cov --no-cov"
 
 [[tool.hatch.envs.test.matrix]]
@@ -29,14 +28,7 @@ python = ["37", "38", "39", "310", "311"]
 branch = true
 parallel = true
 omit = [
-  "kiosk/__about__.py",
-]
-
-[tool.coverage.report]
-exclude_lines = [
-  "no cov",
-  "if __name__ == .__main__.:",
-  "if TYPE_CHECKING:",
+  "src/__init__.py",
 ]
 
 [build-system]
