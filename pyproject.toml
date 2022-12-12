@@ -12,7 +12,7 @@ path = "src/ufodeck/__init__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
-  "rtoml",
+  "fastapi",
   "pytest",
   "pytest-cov"
 ]
