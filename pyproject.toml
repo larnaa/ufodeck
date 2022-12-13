@@ -12,9 +12,10 @@ path = "src/ufodeck/__init__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
-  "fastapi",
   "pytest",
-  "pytest-cov"
+  "pytest-cov",
+  "fastapi",
+  "uvucorn[standart]"
 ]
 
 [tool.hatch.envs.default.scripts] 
