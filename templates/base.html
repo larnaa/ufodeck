@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="en-US"">
+<head>
+    <title>Item Details</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+    
+</head>
+
+<body>    
+    <h1>UFODeck</h1>
+    
+    <p>Try it.</p>
+    
+    <div class="center">
+        <button id="windows" onclick="getSystem()">Windows turn on/off</button>
+        <button id="linux">Linux turn on</button>
+    </div>
+
+    <script>
+        function getSystem() {
+            const url = 'http://localhost:8000/system';
+            fetch(url)
+            .then(data => data.json())
+            .then((json) => {
+                alert(JSON.stringify(json));
+            })
+        }
+    </script>
+
+</body>
+</html>
+{{data.page}}
