@@ -12,6 +12,8 @@ path = "src/ufodeck/__init__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
+  "pydantic",
+  "jinja2",
   "pytest",
   "pytest-cov",
   "fastapi",
