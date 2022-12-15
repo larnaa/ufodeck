@@ -1,9 +1,3 @@
-
-# POST: to create data.
-# GET: to read data.
-# PUT: to update data.
-# DELETE: to delete data.
-
 from fastapi import FastAPI, Request
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
