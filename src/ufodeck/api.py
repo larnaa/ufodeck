@@ -3,11 +3,14 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
+from src.ufodeck.ufodeck import switch_on_windows
 
 app = FastAPI()
 
+
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
+
 
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
@@ -29,9 +32,10 @@ class System(BaseModel):
     system_name: str
 
 
-@app.get("/system")
-async def get_status():
-    return {"status": 'No problem.'}
+@app.get("/windows/{switch}")
+async def get_switch(switch: str = "on"):
+    switch = switch_on_windows
+    return {"status": f'{switch}'}
 
 
 @app.get("/system/{system_name}")

@@ -22,7 +22,7 @@
     <!-- Modal content -->
     <div class="modal-content">
         <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
+        <p id="status">Linux loading...</p>
     </div>
 
     <script>
@@ -30,18 +30,18 @@
 
         btn.onclick = function() {
             var request = new XMLHttpRequest();
-            request.open('GET', 'http://127.0.0.1:8000/system', true);
+            request.open('GET', 'http://127.0.0.1:8000/windows/on', true);
 
             request.onload = function () {
-            var data = JSON.parse(this.response)
+            var data = JSON.parse(this.response);
 
-            if (data.status == "No problem."){
-                modal.style.display = "block";
-                }
-            }
+            // Set status system loading
+            let text = document.getElementById("status").innerHTML
+            let result = text.replace("Linux loading...", data.status);
+            document.getElementById("demo").innerHTML = result;
 
             request.send()
-        }
+        }}
     </script>
 
     <script>
