@@ -12,7 +12,7 @@
     <p>Try it.</p>
     
     <div class="center">
-        <button id="windows" onclick="getSystem()">Windows turn on/off</button>
+        <button id="windows">Windows turn on/off</button>
         <button id="linux">Linux turn on</button>
     </div>
 
@@ -26,22 +26,25 @@
     </div>
 
     <script>
-        var btn = document.getElementById("windows")
+        var btn_win = document.getElementById("windows")
 
-        btn.onclick = function() {
-            var request = new XMLHttpRequest();
-            request.open('GET', 'http://127.0.0.1:8000/windows/on', true);
+
+        btn_win.onclick = function() {
+            var request = new XMLHttpRequest()
+            request.open('GET', 'http://127.0.0.1:8000/windows/on', true)
 
             request.onload = function () {
-            var data = JSON.parse(this.response);
+            var data = JSON.parse(this.response)
 
             // Set status system loading
-            let text = document.getElementById("status").innerHTML
+            let text = document.getElementById("status").innerHTML;
             let result = text.replace("Linux loading...", data.status);
-            document.getElementById("demo").innerHTML = result;
+            document.getElementById("status").innerHTML = result;
 
+            modal.style.display = "block"
+            }
             request.send()
-        }}
+        }
     </script>
 
     <script>
