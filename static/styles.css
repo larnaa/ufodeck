@@ -1,14 +1,17 @@
 body {
-    background-color:#18191A;
+    background-color:#181818;
+    font-family: Arial, sans-serif;
 }
 h1 {
-    color: #E4E6EB;
+    color: #FFFFFF;
     text-align: center;
 }
 p {
     text-align: center;
-    color: #E4E6EB;
+    color: #FFFFFF;
 }
+
+/* Center block */
 .center{
     display: flex;
     justify-content: center;
@@ -17,13 +20,27 @@ p {
 }
 button {
     display: flex;
-    color: #E4E6EB;
+    color: #FFFFFF;
     padding: 15px 32px;
     border-radius: 12px;
     border: none;
     background-color: #3A3B3C;
     border: none;
     margin: 10px 5px;
+}
+
+/* Server status block */
+#display_status  {
+    display: flex;
+    position: fixed;
+    background-color: #212121;
+    border: 1px solid #818181;
+    float: left;
+    width: 45%;
+    height: 15%;
+    margin: 0 1.5% 24px 1.5%;
+    top: 80%;
+    border-radius: 4px;
 }
 
 /* The Modal (background) */
@@ -45,13 +62,13 @@ button {
     background-color: #3A3B3C;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #818181;
     width: 80%; /* Could be more or less, depending on screen size */
 }
 
 /* The Close Button */
 .close {
-    color: #aaa;
+    color: #818181;
     float: right;
     font-size: 28px;
     font-weight: bold;
