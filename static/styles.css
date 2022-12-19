@@ -8,11 +8,7 @@ head, body {
 h1 {
     color: #FFFFFF;
     text-align: center;
-}
-
-p {
-    text-align: center;
-    color: #FFFFFF;
+    padding: 45px;
 }
 
 /* Center block */
@@ -20,17 +16,18 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 200px;
+    height: 540px;
 }
 button {
     display: flex;
     color: #FFFFFF;
-    padding: 15px 32px;
+    padding: 50px 65px;
     border-radius: 12px;
     border: none;
     background-color: #3A3B3C;
     border: none;
     margin: 10px 5px;
+    font-size: 20px;
 }
 
 /* Server status block */
