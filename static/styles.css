@@ -50,6 +50,7 @@ button {
     padding-top: 0em;
     white-space: pre-wrap;
     overflow: scroll;
+    line-height: 0.7;
 }
 
 /* The Modal (background) */

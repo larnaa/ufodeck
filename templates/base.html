@@ -44,7 +44,7 @@
                     let result = text.replace("Linux loading...", data.status);
                     document.getElementById("status").innerHTML = result;
 
-                    fake_terminal.append('\n[username@<hostname> ~]$ ' + 'status')
+                    fake_terminal.append('\n[username@<hostname> ~]$ ' + data.status)
 
                 }
                 request.send()
