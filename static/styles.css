@@ -5,6 +5,7 @@ head, body {
     background-color:#181818;
     font-family: Arial, sans-serif;
 }
+
 h1 {
     color: #FFFFFF;
     text-align: center;
@@ -18,6 +19,8 @@ h1 {
     align-items: center;
     height: 540px;
 }
+
+/* Button "Windows turn on/off" */
 button {
     display: flex;
     color: #FFFFFF;
@@ -49,41 +52,3 @@ button {
     overflow: scroll;
     line-height: 0.7;
 }
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content/Box */
-.modal-content {
-    background-color: #3A3B3C;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #818181;
-    width: 80%; /* Could be more or less, depending on screen size */
-}
-
-/* The Close Button */
-.close {
-    color: #818181;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-} 
