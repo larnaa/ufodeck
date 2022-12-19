@@ -1,4 +1,7 @@
-body {
+head, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
     background-color:#181818;
     font-family: Arial, sans-serif;
 }
@@ -6,10 +9,10 @@ h1 {
     color: #FFFFFF;
     text-align: center;
 }
-pre {
+
+p {
     text-align: center;
     color: #FFFFFF;
-    font-family: Arial, sans-serif;
 }
 
 /* Center block */
@@ -35,14 +38,18 @@ button {
     display: flex;
     position: fixed;
     background-color: #212121;
-    border: 1px solid #818181;
+    border: 1.5px solid #818181;
+    color: #ffffffec;
     float: left;
     width: 45%;
     height: 15%;
-    margin: 0 1.5% 24px 1.5%;
+    margin: 0 1% 30px 3%;
     top: 80%;
     border-radius: 4px;
-    padding: 0.5em;
+    padding: 0.7em;
+    padding-top: 0em;
+    white-space: pre-wrap;
+    overflow: scroll;
 }
 
 /* The Modal (background) */

@@ -16,7 +16,7 @@
         <button id="linux">Linux turn on</button>
     </div>
 
-    <pre id="display_status">This is status.</pre>
+    <div id="display_status"></div>
 
     <!-- The Modal -->
     <div id="modal" class="modal">
@@ -34,7 +34,7 @@
 
             btn_win.onclick = function () {
                 var request = new XMLHttpRequest()
-                request.open('GET', 'http://127.0.0.1:8000/windows/on', true)
+                request.open('GET', 'http://localhost:8000/windows/on', true)
 
                 request.onload = function () {
                     var data = JSON.parse(this.response)
@@ -44,9 +44,8 @@
                     let result = text.replace("Linux loading...", data.status);
                     document.getElementById("status").innerHTML = result;
 
-                    fake_terminal.append( '\n' + 'asdad')
+                    fake_terminal.append('\n[username@<hostname> ~]$ ' + 'status')
 
-                    // modal.style.display = "block"
                 }
                 request.send()
             }
