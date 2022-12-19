@@ -3,7 +3,7 @@
 <html lang="en-US"">
 <head>
     <title>Item Details</title>
-    <link href=" {{ url_for('static', path='/styles.css' ) }}" rel="stylesheet">
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
         <button id="linux">Linux turn on</button>
     </div>
 
-    <p id="display_status">This is status.</p>
+    <pre id="display_status">This is status.</pre>
 
     <!-- The Modal -->
     <div id="modal" class="modal">
@@ -29,6 +29,7 @@
 
         <script>
             var btn_win = document.getElementById("windows")
+            var fake_terminal = document.getElementById("display_status")
 
 
             btn_win.onclick = function () {
@@ -43,7 +44,9 @@
                     let result = text.replace("Linux loading...", data.status);
                     document.getElementById("status").innerHTML = result;
 
-                    modal.style.display = "block"
+                    fake_terminal.append( '\n' + 'asdad')
+
+                    // modal.style.display = "block"
                 }
                 request.send()
             }
