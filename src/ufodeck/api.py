@@ -35,12 +35,3 @@ class System(BaseModel):
 async def get_switch(switch: str = "on") -> Dict[str, Any]:
     status = switch_on_windows(switch)
     return {"status": f"{status}"}
-
-
-# Don't use
-@app.get("/system/{system_name}")
-async def get_system(system_name: str) -> Dict[str, Any]:
-    if system_name == "windows":
-        return {"system_name": system_name, "message": "This is Windows!"}
-
-    return {"system_name": system_name, "message": "This is Linux!"}
