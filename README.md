@@ -8,7 +8,6 @@
   - [Installation](#installation)
   - [License](#license)
 - [Other](#other)
-  - [Potry --\> hatch](#potry----hatch)
   - [ufodeck plan](#ufodeck-plan)
 
 ## Installation
@@ -38,11 +37,11 @@ uvicorn src.ufodeck.ufodeck:app --reload
    1. POST: status machine,
    2. GET: run Windows Linux.
 3. FastAPI Client.
-Interface ideas:
-https://i.pinimg.com/originals/bc/92/e4/bc92e4718349f3debdcd54821e5bc4bd.jpg
-https://upload.wikimedia.org/wikipedia/commons/f/fe/WP_Space_Ship_Control_Panel.PNG
+Interface ideas:  
+https://i.pinimg.com/originals/bc/92/e4/bc92e4718349f3debdcd54821e5bc4bd.jpg  
+https://upload.wikimedia.org/wikipedia/commons/f/fe/WP_Space_Ship_Control_Panel.PNG  
 https://hackster.imgix.net/uploads/attachments/1233911/feedt3rkiokhb6m_gN9PrsJXzE.jpg?auto=compress%2Cformat&w=830&h=466.875&fit=min&dpr=2.625
-https://i.makeagif.com/media/7-30-2015/S1foCk.gif 
+https://i.makeagif.com/media/7-30-2015/S1foCk.gif  
 
 Extra:
 1. Connect to local server with ssh.

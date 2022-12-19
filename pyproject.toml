@@ -17,7 +17,7 @@ dependencies = [
   "pytest",
   "pytest-cov",
   "fastapi",
-  "uvucorn[standart]"
+  "uvicorn[standart]"
 ]
 
 [tool.hatch.envs.default.scripts] 
