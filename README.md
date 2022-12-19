@@ -1,34 +1,21 @@
-# ufodeck
+# UFOdeck
 
 -----
 
 **Table of Contents**
 
 - [ufodeck](#ufodeck)
-  - [Installation](#installation)
-  - [License](#license)
-- [Other](#other)
-  - [ufodeck plan](#ufodeck-plan)
+  - [Start server](#start-server)
+  - [Ufodeck plan](#ufodeck-plan)
 
-## Installation
 
-```console
-pip install ufodeck
-```
-**Start server:**
+## Start server
+
 ```bash
 uvicorn src.ufodeck.ufodeck:app --reload
 ## --reload: make the server restart after code changes. Only do this for development.
 ```
-
-## License
-
-`ufodeck` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
-
 ---
-
-# Other
-
 
 ## ufodeck plan
 
@@ -44,10 +31,5 @@ https://hackster.imgix.net/uploads/attachments/1233911/feedt3rkiokhb6m_gN9PrsJXz
 https://i.makeagif.com/media/7-30-2015/S1foCk.gif  
 
 Extra:
-1. Connect to local server with ssh.
+1. Connect to the local server with ssh.
 2. Create front Client.
-
-POST: to create data.  
-GET: to read data.  
-PUT: to update data.  
-DELETE: to delete data.
