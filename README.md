@@ -12,7 +12,7 @@
 ## Start server
 
 ```bash
-uvicorn src.ufodeck.ufodeck:app --reload
+uvicorn src.ufodeck.api:app --reload
 ## --reload: make the server restart after code changes. Only do this for development.
 ```
 ---
