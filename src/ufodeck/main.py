@@ -4,7 +4,7 @@ import subprocess
 def switch_on_windows(switch: str) -> str:
     if switch == "on":
         result = subprocess.run(
-            ["echo", "Windows loading..."],  # your command
+            ["sudo", "virsh", "start", "win11"],  # your command
             shell=False,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
