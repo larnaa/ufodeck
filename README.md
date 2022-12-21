@@ -1,4 +1,4 @@
-<img src="https://user-images.githubusercontent.com/49699225/208981924-f2e02afa-8d82-41b4-b9fc-f5292e65b588.png" align="left" width="480">
+<img src="https://user-images.githubusercontent.com/49699225/208981924-f2e02afa-8d82-41b4-b9fc-f5292e65b588.png" align="right" width="480">
 
 # UFOdeck  
 <br/>
