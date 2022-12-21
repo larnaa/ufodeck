@@ -9,20 +9,42 @@
 <body>
     <h1>UFODeck</h1>
 
-    <div class="center">
-        <button id="windows">Windows turn on/off</button>
+
+    <div class="btn-group">
+        <button id="windows_on">Windows turn on</button>
+        <button id="windows_off">Windows turn off</button>
     </div>
+
 
     <div id="display_status"></div>
 
     <script>
-        var btn_win = document.getElementById("windows")
+        var btn_win = document.getElementById("windows_on")
         var fake_terminal = document.getElementById("display_status")
 
 
         btn_win.onclick = function () {
             var request = new XMLHttpRequest()
             request.open('GET', 'http://192.168.1.2:8000/windows/on', true)
+
+            request.onload = function () {
+                var data = JSON.parse(this.response)
+
+                fake_terminal.append('\n[username@<hostname> ~]$ ' + data.status)
+
+            }
+            request.send()
+        }
+    </script>
+
+    <script>
+        var btn_win = document.getElementById("windows_off")
+        var fake_terminal = document.getElementById("display_status")
+
+
+        btn_win.onclick = function () {
+            var request = new XMLHttpRequest()
+            request.open('GET', 'http://192.168.1.2:8000/windows/off', true)
 
             request.onload = function () {
                 var data = JSON.parse(this.response)

@@ -1,10 +1,8 @@
 # UFOdeck
 
------
-
 **Table of Contents**
 
-- [ufodeck](#ufodeck)
+- [Ufodeck](#ufodeck)
   - [Start server](#start-server)
   - [Ufodeck plan](#ufodeck-plan)
 
@@ -15,7 +13,6 @@
 uvicorn src.ufodeck.api:app --reload
 ## --reload: make the server restart after code changes. Only do this for development.
 ```
----
 
 ## ufodeck plan
 
