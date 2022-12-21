@@ -32,6 +32,6 @@ class System(BaseModel):
 
 
 @app.get("/windows/{switch}")
-async def get_switch(switch: str = "on") -> Dict[str, Any]:
+async def get_switch(switch: str) -> Dict[str, Any]:
     status = switch_on_windows(switch)
     return {"status": f"{status}"}

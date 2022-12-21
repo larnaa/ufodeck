@@ -12,7 +12,7 @@ def switch_on_windows(switch: str) -> str:
         )
     if switch == "off":
         result = subprocess.run(
-            ["echo", "Windows closing..."],
+            ["sudo", "virsh", "destroy", "win11"],
             shell=False,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,

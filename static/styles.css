@@ -11,26 +11,29 @@ h1 {
     text-align: center;
     padding: 45px;
 }
-
-/* Center block */
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 540px;
-}
-
-/* Button "Windows turn on/off" */
-button {
-    display: flex;
+.btn-group button {
+    cursor: pointer; /* Pointer/hand icon */
+    width: 50%; /* Set a width if needed */
     color: #FFFFFF;
     padding: 50px 65px;
     border-radius: 12px;
     border: none;
     background-color: #3A3B3C;
-    border: none;
     margin: 10px 5px;
     font-size: 20px;
+    display:inline-block;
+    
+  }
+
+.btn-group{
+    position: relative;
+    top: 30%;
+    left: 25%;
+}
+
+.text_center{
+    height: 200px;
+    position: relative;
 }
 
 /* Server status block */
