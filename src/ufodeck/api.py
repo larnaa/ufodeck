@@ -1,10 +1,10 @@
-from fastapi import FastAPI, Request
+from fastapi import FastAPI
+from fastapi import Request
 from fastapi import Response
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
-from pydantic import BaseModel
-from ufodeck.main import switch_on_windows
+from ufodeck.main import manage_windows
 from typing import Any
 from typing import Dict
 
@@ -21,17 +21,7 @@ async def home(request: Request) -> Response:
     return templates.TemplateResponse("base.html", {"request": request, "data": data})
 
 
-@app.get("/page/{page_name}", response_class=HTMLResponse)
-async def page(request: Request, page_name: str) -> Response:
-    data = {"page": page_name}
-    return templates.TemplateResponse("base.html", {"request": request, "data": data})
-
-
-class System(BaseModel):
-    system_name: str
-
-
 @app.get("/windows/{switch}")
 async def get_switch(switch: str) -> Dict[str, Any]:
-    status = switch_on_windows(switch)
+    status = manage_windows(switch)
     return {"status": f"{status}"}
