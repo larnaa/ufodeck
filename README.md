@@ -13,8 +13,11 @@
 ## Start server
 
 ```bash
-uvicorn src.ufodeck.api:app --reload
 ## --reload: make the server restart after code changes. Only do this for development.
+uvicorn src.ufodeck.api:app --reload
+
+## Run with your host and port.
+uvicorn src.ufodeck.api:app --host localhost --port 8000
 ```
 
 ## UFOdeck plan

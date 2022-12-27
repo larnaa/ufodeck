@@ -9,15 +9,14 @@
 <body>
     <h1>UFODeck</h1>
 
-
     <div class="btn-group">
         <button id="windows_on">Windows turn on</button>
         <button id="windows_off">Windows turn off</button>
     </div>
 
-
     <div id="display_status"></div>
 
+    <!-- Windows turn on -->
     <script>
         var btn_win = document.getElementById("windows_on")
         var fake_terminal = document.getElementById("display_status")
@@ -25,7 +24,7 @@
 
         btn_win.onclick = function () {
             var request = new XMLHttpRequest()
-            request.open('GET', 'http://192.168.1.2:8000/windows/on', true)
+            request.open('GET', 'http://localhost:8000/windows/on', true)
 
             request.onload = function () {
                 var data = JSON.parse(this.response)
@@ -37,6 +36,7 @@
         }
     </script>
 
+    <!-- Windows turn off -->
     <script>
         var btn_win = document.getElementById("windows_off")
         var fake_terminal = document.getElementById("display_status")
@@ -44,7 +44,7 @@
 
         btn_win.onclick = function () {
             var request = new XMLHttpRequest()
-            request.open('GET', 'http://192.168.1.2:8000/windows/off', true)
+            request.open('GET', 'http://localhost:8000/windows/off', true)
 
             request.onload = function () {
                 var data = JSON.parse(this.response)

@@ -1,15 +1,18 @@
 import subprocess
 
 
-def switch_on_windows(switch: str) -> str:
+def manage_windows(switch: str) -> str:
+    '''Virtual Windows management'''
+
     if switch == "on":
         result = subprocess.run(
-            ["sudo", "virsh", "start", "win11"],  # your command
+            ["echo", "win11"],
             shell=False,
             stdout=subprocess.PIPE,
             stderr=subprocess.PIPE,
             check=False,
         )
+
     if switch == "off":
         result = subprocess.run(
             ["sudo", "virsh", "destroy", "win11"],

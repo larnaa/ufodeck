@@ -3,7 +3,7 @@ name = "ufodeck"
 description = 'Tool to manage loading OS and visualize OS state.'
 license = "MIT"
 authors = [
-  { name = "larnaa", email = "larnaa@larnaa.pw" },
+  { name = "larnaa", email = "github@larnaa.pw" },
 ]
 dynamic = ["version"]
 
