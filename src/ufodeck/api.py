@@ -4,14 +4,13 @@ from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
-from ufodeck.main import switch_on_windows
+from ufodeck.main import run_script
 from typing import Any
 from typing import Dict
 
-app = FastAPI()
-
 
 templates = Jinja2Templates(directory="templates")
+app = FastAPI()
 app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
@@ -31,7 +30,8 @@ class System(BaseModel):
     system_name: str
 
 
-@app.get("/windows/{switch}")
-async def get_switch(switch: str) -> Dict[str, Any]:
-    status = switch_on_windows(switch)
+@app.get("/run/{script}")
+async def run(script: str) -> Dict[str, Any]:
+
+    status = run_script(script)
     return {"status": f"{status}"}
