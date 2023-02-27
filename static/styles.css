@@ -1,19 +1,23 @@
-head, body {
+head,
+body {
     margin: 0;
     height: 100%;
     width: 100%;
-    background-color:#181818;
+    background-color: #181818;
     font-family: Arial, sans-serif;
 }
 
 h1 {
     color: #FFFFFF;
-    text-align: center;
-    padding: 45px;
+    /* text-align: center; */
+    padding-left: 1em;
 }
+
 .btn-group button {
-    cursor: pointer; /* Pointer/hand icon */
-    width: 50%; /* Set a width if needed */
+    cursor: pointer;
+    /* Pointer/hand icon */
+    width: 50%;
+    /* Set a width if needed */
     color: #FFFFFF;
     padding: 50px 65px;
     border-radius: 12px;
@@ -21,37 +25,36 @@ h1 {
     background-color: #3A3B3C;
     margin: 10px 5px;
     font-size: 20px;
-    display:inline-block;
-    
-  }
-
-.btn-group{
-    position: relative;
-    top: 30%;
-    left: 25%;
+    display: inline-block;
 }
 
-.text_center{
+.btn-group {
+    display: flex;
+    top: 30%;
+    left: 75%;
+}
+
+.text_center {
     height: 200px;
     position: relative;
 }
 
 /* Server status block */
-#display_status  {
+#status {
     display: flex;
-    position: fixed;
     background-color: #212121;
     border: 1.5px solid #818181;
     color: #ffffffec;
     float: left;
-    width: 45%;
-    height: 15%;
-    margin: 0 1% 30px 3%;
-    top: 80%;
+    width: 100%;
+    height: 100%;
+    bottom: 100%;
+    margin-top: 1em;
+    margin-bottom: 1em;
     border-radius: 4px;
-    padding: 0.7em;
-    padding-top: 0em;
+    padding: 0;
+    padding-left: 0.7em;
     white-space: pre-wrap;
     overflow: scroll;
-    line-height: 0.7;
+    line-height: 1.2;
 }

@@ -1,22 +1,14 @@
+from pathlib import Path
 import subprocess
 
+scripts_dir = Path(__file__).parent / "scripts"
 
-def switch_on_windows(switch: str) -> str:
-    if switch == "on":
-        result = subprocess.run(
-            ["sudo", "virsh", "start", "win11"],  # your command
-            shell=False,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            check=False,
-        )
-    if switch == "off":
-        result = subprocess.run(
-            ["sudo", "virsh", "destroy", "win11"],
-            shell=False,
-            stdout=subprocess.PIPE,
-            stderr=subprocess.PIPE,
-            check=False,
-        )
-
+def run_script(name: str) -> str:
+    result = subprocess.run(
+        scripts_dir / f'{name}.sh',
+        shell=False,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.PIPE,
+        check=False,
+    )
     return result.stdout.decode()
