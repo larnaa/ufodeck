@@ -1,0 +1,7 @@
+[Unit]
+Description=ufodeck
+After=libvirtd.socket
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/ufodeck start

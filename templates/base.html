@@ -10,50 +10,59 @@
     <h1>UFODeck</h1>
 
     <div class="btn-group">
-        <button id="windows_on">Windows turn on</button>
-        <button id="windows_off">Windows turn off</button>
+        <button class="request" id="gpu_nvidia">GPU: nvidia</button>
+        <button class="request" id="gpu_vfio">GPU: vfio-pci</button>
+        <button class="request" id="performance">Host: performance</button>
+        <button class="request" id="powersave">Host: powersave mode</button>
+        <button class="request" id="win11_start">Windows 11 start</button>
+        <button class="request" id="win11_destroy">Windows 11 destroy</button>
     </div>
 
-    <div id="display_status"></div>
+    <div id="status">Welcome to UFODeck!<br><br>[ayyy@lmao ~]$ </div>
 
     <!-- Windows turn on -->
     <script>
-        var btn_win = document.getElementById("windows_on")
-        var fake_terminal = document.getElementById("display_status")
+        function map_button(id, url) {
+            var btn = document.getElementById(id)
+            btn.onclick = function () {
+                // Disable all buttons
+                request_buttons = document.getElementsByClassName('request')
+                for (var i = 0; i < request_buttons.length; i++) {
+                    var btn = request_buttons[i]
+                    btn.disabled = true
+                    btn.style.backgroundColor = '#222'
+                }
 
+                // Sending starting message
+                var status = document.getElementById('status')
+                status.append('\n=> Requesting ' + id + '...')
 
-        btn_win.onclick = function () {
-            var request = new XMLHttpRequest()
-            request.open('GET', 'http://localhost:8000/windows/on', true)
+                // Sending request
+                var request = new XMLHttpRequest()
+                request.open('GET', url, true)
+                request.onload = function () {
+                    var data = JSON.parse(this.response)
+                    status.append('\n' + data.status + '\n[ayyy@lmao ~]$ ')
+                    status.scrollTo(0, status.scrollHeight);
 
-            request.onload = function () {
-                var data = JSON.parse(this.response)
-
-                fake_terminal.append('\n[username@<hostname> ~]$ ' + data.status)
-
+                    // Reenable buttons
+                    for (var i = 0; i < request_buttons.length; i++) {
+                        var btn = request_buttons[i]
+                        btn.disabled = false
+                        btn.style.backgroundColor = '#3A3B3C'
+                    }
+                }
+                request.send()
             }
-            request.send()
         }
-    </script>
 
-    <!-- Windows turn off -->
-    <script>
-        var btn_win = document.getElementById("windows_off")
-        var fake_terminal = document.getElementById("display_status")
-
-
-        btn_win.onclick = function () {
-            var request = new XMLHttpRequest()
-            request.open('GET', 'http://localhost:8000/windows/off', true)
-
-            request.onload = function () {
-                var data = JSON.parse(this.response)
-
-                fake_terminal.append('\n[username@<hostname> ~]$ ' + data.status)
-
-            }
-            request.send()
+        // Map buttons to API endpoints by id
+        request_buttons = document.getElementsByClassName('request')
+        for (var i = 0; i < request_buttons.length; i++) {
+            var btn = request_buttons[i]
+            map_button(btn.id, '/run/' + btn.id)
         }
+
     </script>
 
 </body>
