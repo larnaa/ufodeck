@@ -5,37 +5,38 @@ body {
     width: 100%;
     background-color: #181818;
     font-family: Arial, sans-serif;
-    background-color:#181818;
-    color: #FFFFFF;
 }
 
 h1 {
     color: #FFFFFF;
-    /* text-align: center; */
+    text-align: center;
     padding-left: 1em;
 }
 
+.container {
+    display: grid;
+    grid-auto-rows: 1fr 1fr;
+    grid-gap: 20px;
+}
+
 .btn-group button {
+    position:relative;
     cursor: pointer;
     /* Pointer/hand icon */
-    width: 50%;
-    /* Set a width if needed */
     color: #FFFFFF;
     padding: 50px 65px;
     border-radius: 12px;
     border: none;
+    background-color: #3A3B3C;
+    margin: 10px 5px;
     font-size: 20px;
     display: inline-block;
 }
 
-.btn-group {
-    display: flex;
-    top: 30%;
-    left: 75%;
-}
 
 .text_center {
     height: 200px;
+    position: relative;
 }
 
 /* Server status block */

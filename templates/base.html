@@ -8,18 +8,23 @@
 
 <body>
     <h1>UFODeck</h1>
+    
+    <div class="container">
 
-    <div class="btn-group">
-        <button class="request" id="gpu_nvidia">GPU: nvidia</button>
-        <button class="request" id="gpu_vfio">GPU: vfio-pci</button>
-        <button class="request" id="performance">Host: performance</button>
-        <button class="request" id="powersave">Host: powersave mode</button>
-        <button class="request" id="win11_start">Windows 11 start</button>
-        <button class="request" id="win11_destroy">Windows 11 destroy</button>
+        <div class="btn-group">
+            <button class="request" id="gpu_nvidia">GPU: nvidia</button>
+            <button class="request" id="gpu_vfio">GPU: vfio-pci</button>
+            <button class="request" id="performance">Host: performance</button>
+            <button class="request" id="powersave">Host: powersave mode</button>
+            <button class="request" id="win11_start">Windows 11 start</button>
+            <button class="request" id="win11_destroy">Windows 11 destroy</button>
+        </div>
+
+        <div class="status-block">
+            <div id="status">Welcome to UFODeck!<br><br>[ayyy@lmao ~]$ </div>
+        </div>
+
     </div>
-
-    <div id="status">Welcome to UFODeck!<br><br>[ayyy@lmao ~]$ </div>
-
     <!-- Windows turn on -->
     <script>
         function map_button(id, url) {
