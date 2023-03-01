@@ -13,11 +13,7 @@ h1 {
     padding-left: 1em;
 }
 
-.container {
-    display: grid;
-    grid-auto-rows: 1fr 1fr;
-    grid-gap: 20px;
-}
+
 
 .btn-group button {
     position:relative;
@@ -31,12 +27,19 @@ h1 {
     margin: 10px 5px;
     font-size: 20px;
     display: inline-block;
+    padding: 10px 20px;
+    width: 15em;
 }
 
 
 .text_center {
     height: 200px;
     position: relative;
+}
+
+.btn-group {
+    top: 30%;
+    left: 75%;
 }
 
 /* Server status block */
