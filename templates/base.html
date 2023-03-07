@@ -11,6 +11,7 @@
     
 
     <div class="btn-group">
+        <meta name="viewport" content="width=device-width">
         <button class="request" id="gpu_nvidia">GPU: nvidia</button>
         <button class="request" id="gpu_vfio">GPU: vfio-pci</button>
         <button class="request" id="performance">Host: performance</button>
@@ -19,10 +20,13 @@
         <button class="request" id="win11_destroy">Windows 11 destroy</button>
     </div>
 
-    <div id="status">Welcome to UFODeck!<br><br>[ayyy@lmao ~]$ </div>
+
+    <div class="status-container">
+        <meta name="viewport" content="width=device-width,height=device-height"/>
+        <div id="status">Welcome to UFODeck!<br><br>[ayyy@lmao ~]$ </div>
+    </div>
 
 
-    <!-- Windows turn on -->
     <script>
         function map_button(id, url) {
             var btn = document.getElementById(id)
@@ -32,7 +36,8 @@
                 for (var i = 0; i < request_buttons.length; i++) {
                     var btn = request_buttons[i]
                     btn.disabled = true
-                    btn.style.backgroundColor = '#222'
+                    btn.style.backgroundColor = '#242526'
+                    btn.style.color = '#B0B3B8'
                 }
 
                 // Sending starting message
@@ -52,6 +57,7 @@
                         var btn = request_buttons[i]
                         btn.disabled = false
                         btn.style.backgroundColor = '#3A3B3C'
+                        btn.style.color = '#E4E6EB'
                     }
                 }
                 request.send()
