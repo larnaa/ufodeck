@@ -9,21 +9,25 @@
   - [Start server](#start-server)
   - [Ufodeck plan](#ufodeck-plan)
 <br/> <br/> <br/> <br/> <br/>
-<br/> <br/> 
+<br/> <br/> <br/><br/><br/>
 ## Start server
 
 ```bash
-uvicorn src.ufodeck.api:app --reload
 ## --reload: make the server restart after code changes. Only do this for development.
+uvicorn src.ufodeck.api:app --reload
+
+## Run with your host and port.
+uvicorn src.ufodeck.api:app --host localhost --port 8000
 ```
 
-## ufodeck plan
+## UFOdeck plan
 
-1. Main page template. Buttons: turn on Windows/Linux.
-2. Routes:
-   1. POST: status machine,
-   2. GET: run Windows Linux.
-3. FastAPI Client.
+- [x] Main page template. Buttons: turn on Windows.
+- [ ] Routes:
+   - [ ] POST: status machine,
+   - [x] GET: run Windows.
+- [x] FastAPI Client.
+</br>
 Interface ideas:  
 https://i.pinimg.com/originals/bc/92/e4/bc92e4718349f3debdcd54821e5bc4bd.jpg  
 https://upload.wikimedia.org/wikipedia/commons/f/fe/WP_Space_Ship_Control_Panel.PNG  
@@ -31,5 +35,5 @@ https://hackster.imgix.net/uploads/attachments/1233911/feedt3rkiokhb6m_gN9PrsJXz
 https://i.makeagif.com/media/7-30-2015/S1foCk.gif  
 
 Extra:
-1. Connect to the local server with ssh.
-2. Create front Client.
+- [ ] Connect to the local server with ssh.
+- [ ] Create front Client.
