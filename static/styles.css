@@ -17,18 +17,21 @@ h1 {
     color: #E4E6EB;
     text-align: center;
     padding-left: 1em;
+    background-color: #242526;
+    opacity: 80%;
+    border: 1.5px solid #B0B3B8;
 }
 
 .request {
     cursor: pointer;
     color: #E4E6EB;
-    border-radius: 12px;
-    border: none;
+    border: 1.5px solid greenyellow;
     background-color: #3A3B3C;
-    margin: 10px 5px;
+    margin: 10px 10px;
     font-size: 20px;
     width: 12em;
-    height: 5em;
+    height: 4em;
+    opacity: 80%;
 }
 
 .btn-group {
@@ -41,6 +44,7 @@ h1 {
 
 /* Fixed size of the status block */
 .status-container > #status {
+    opacity: 80%;
     height: 500px;
     overflow-x:hidden;
     overflow-y:auto;
